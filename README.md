@@ -1,27 +1,17 @@
-# GestionEmpleadosFrontend
+# Gestión Empleados Front
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.3.
+## Descripción
 
-## Development server
+**gestiónEmpleadosFront** es un proyecto de gestión de empleados que utiliza Angular para la interfaz de usuario. Este proyecto permite la visualización y gestión de empleados a través de una tabla simple, utilizando el sistema MVC y JPA.
+en la aplicación se puede crear,guardar y eliminar un empleado asi como visualizar la lista y gráficos de las horas trabajadas.El proyecto tiene comentarios de uso y test mediante cypress.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Requisitos
 
-## Code scaffolding
+Para ejecutar este proyecto, asegúrate de tener instalados los siguientes componentes en tu máquina:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Node.js**: Versión mínima recomendada 18.20.4
+- **Angular CLI**: Versión mínima recomendada 18.1.3
+- **npm**: Versión mínima recomendada 10.7.0
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
