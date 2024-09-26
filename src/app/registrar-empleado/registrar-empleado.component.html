@@ -1,22 +1,25 @@
-<div class="col-md-6 offset-md-3">
-    <h3 class="text-center">Registro de Empleado</h3>
-    <form (ngSubmit)="onSubmit()">
-        <!-- nombre -->
-        <div class="form-group">
-            <label>Nombre:</label>
-            <input type="text" class="form-control" id="nombre" [(ngModel)]="empleado.nombre" name="nombre">
-        </div>
-         <!-- apellido -->
-        <div class="form-group">
-            <label>Apellido:</label>
-            <input type="text" class="form-control" id="apellido" [(ngModel)]="empleado.apellido" name="apellido">
-        </div>
-         <!-- email -->
-        <div class="form-group">
-            <label>Email:</label>
-            <input type="email" class="form-control" id="email" [(ngModel)]="empleado.email" name="email">
-        </div>
-        <br><br>
-        <button class="btn btn-success">Guardar</button>
-    </form>
-</div>
+<h2 class="text-center">Registrar nuevo empleado</h2>
+
+<form (ngSubmit)="onSubmit()" #empleadoForm="ngForm" class="container mt-4">
+  <div class="form-group mb-3">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" [(ngModel)]="empleado.nombre" name="nombre" required class="form-control">
+  </div>
+  
+  <div class="form-group mb-3">
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" [(ngModel)]="empleado.apellido" name="apellido" required class="form-control">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="email">Email:</label>
+    <input type="email" id="email" [(ngModel)]="empleado.email" name="email" required class="form-control">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="horasTrabajadas">Horas Trabajadas:</label> 
+    <input type="number" id="horasTrabajadas" [(ngModel)]="empleado.horasTrabajadas" name="horasTrabajadas" required class="form-control">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Guardar</button>
+</form>

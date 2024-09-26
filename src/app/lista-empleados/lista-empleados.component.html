@@ -1,17 +1,37 @@
 <h2>Lista empleados</h2>
+
+<!-- Botón verde para añadir un nuevo empleado -->
+<button class="btn btn-success mb-3" (click)="irARegistrarEmpleado()">
+  Añadir Empleado
+</button>
+
 <table class="table table-striped">
-    <thead class="table-dark">
-        <tr>
-            <th>Nombre</th>
-            <th>Apellido</th>
-            <th>Email</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let empleado of empleados">
-            <td>{{empleado.nombre}}</td>
-            <td>{{empleado.apellido}}</td>
-            <td>{{empleado.email}}</td>
-        </tr>
-    </tbody>
+  <thead class="table-dark">
+    <tr>
+      <th>Nombre</th>
+      <th>Apellido</th>
+      <th>Email</th>
+      <th>Horas Trabajadas</th> <!-- Nueva columna para las horas trabajadas -->
+      <th>Acciones</th> <!-- Nueva columna para acciones -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let empleado of empleados">
+      <td>{{ empleado.nombre }}</td>
+      <td>{{ empleado.apellido }}</td>
+      <td>{{ empleado.email }}</td>
+      <td>{{ empleado.horasTrabajadas }}</td> <!-- Mostrar las horas trabajadas -->
+      <td>
+        <!-- Botón rojo para eliminar -->
+        <button class="btn btn-danger" (click)="eliminarEmpleado(empleado.id)">
+          Eliminar
+        </button>
+      </td>
+    </tr>
+  </tbody>
 </table>
+
+<!-- Aquí colocamos el gráfico de horas trabajadas debajo de la tabla -->
+<h3 class="mt-4">Gráfico de Horas Trabajadas</h3>
+<app-grafico-horas></app-grafico-horas>
+
